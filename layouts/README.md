@@ -11,6 +11,6 @@ or by manually specifying it as a prop to `<NuxtLayout>`. **(Note: The layout na
 so `someLayout` becomes `some-layout`.)**
 If you only have a single layout in your application, we recommend using app.vue instead.
 
-***Unlike other components, your layouts must have a single root element to allow Nuxt to apply transitions between
+**_Unlike other components, your layouts must have a single root element to allow Nuxt to apply transitions between
 layout
-changes - and this root element cannot be a `<slot />`.***
+changes - and this root element cannot be a `<slot />`._**

@@ -1,10 +1,8 @@
-<script lang="ts" setup>
-
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <div>
-    <h1>Hello Guys! Let's begin to develop </h1>
+    <h1>Hello Guys! Let's begin to develop</h1>
   </div>
 </template>
 
