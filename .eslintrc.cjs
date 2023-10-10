@@ -22,10 +22,13 @@ module.exports = {
     requireConfigFile: false,
     project: ['./tsconfig.json', './tsconfig.node.json'],
     parser: '@typescript-eslint/parser',
+    strictNullChecks: true, // Added to fix the problem
   },
   plugins: ['vue'],
   rules: {
     'vue/max-attributes-per-line': 'off',
     'vue/multi-word-component-names': 'off',
+    '@typescript-eslint/prefer-nullish-coalescing': 'error',
+    '@typescript-eslint/strict-boolean-expressions': 'error',
   },
 };
