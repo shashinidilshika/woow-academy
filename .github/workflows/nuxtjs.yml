@@ -19,11 +19,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Setup Node
+      - name: Setup PNPM
         uses: actions/checkout@v2
         with:
           node-version: 16.x
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
+          cache: 'pnpm'
+      - name: Install PNPM
+        run: npm install -g pnpm
+      - name: Install dependencies
+        run: pnpm install
       - name: Detect package manager
         id: detect-package-manager
         run: |
