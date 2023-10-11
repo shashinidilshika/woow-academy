@@ -54,10 +54,10 @@ jobs:
         with:
           version: 7
           cache: 'pnpm'
-      #      - name: Setup Pages
-      #        uses: actions/configure-pages@v3
-      #        with:
-      #          static_site_generator: nuxt
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+        with:
+          static_site_generator: nuxt
       - name: Restore cache
         uses: actions/cache@v3
         with:
