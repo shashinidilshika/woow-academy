@@ -25,8 +25,6 @@ jobs:
           version: 7
       - name: Install PNPM
         run: npm install -g pnpm
-      - name: Install dependencies
-        run: pnpm install
       - name: Detect package manager
         id: detect-package-manager
         run: |
