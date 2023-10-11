@@ -4,7 +4,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['standard-with-typescript', 'plugin:vue/vue3-essential', '@nuxt/eslint-config'],
+  extends: ['standard-with-typescript', 'plugin:vue/vue3-essential', '@nuxt/eslint-config', 'prettier'],
   overrides: [
     {
       env: {
@@ -24,11 +24,12 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     strictNullChecks: true, // Added to fix the problem
   },
-  plugins: ['vue'],
+  plugins: ['vue', 'prettier'],
   rules: {
     'vue/max-attributes-per-line': 'off',
     'vue/multi-word-component-names': 'off',
-    '@typescript-eslint/prefer-nullish-coalescing': 'error',
-    '@typescript-eslint/strict-boolean-expressions': 'error',
+    '@typescript-eslint/prefer-nullish-coalescing': 'warn',
+    '@typescript-eslint/strict-boolean-expressions': 'warn',
+    'prettier/prettier': ['error'],
   },
-};
+}

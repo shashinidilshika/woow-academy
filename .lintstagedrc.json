@@ -1,0 +1,8 @@
+{
+  "*.ts": ["prettier --write", "eslint"],
+  "*.js": ["prettier --write", "eslint"],
+  "*.json": ["prettier --write"],
+  "*.vue": ["prettier --write", "eslint"],
+  "*.scss": ["prettier --write", "stylelint"],
+  "*.css": ["prettier --write", "stylelint"]
+}
