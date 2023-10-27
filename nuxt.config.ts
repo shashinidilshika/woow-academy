@@ -5,10 +5,16 @@ interface NitroConfig {
   css?: string[]
   autoImports?: Array<string | [string, string]>
   pinia?: boolean | { autoImports?: Array<string | [string, string]> }
+  injectPosition?: string
+  viewer?: boolean
+  configPath?: string
+  exposeConfig?: boolean
+  exposeLevel?: number
+  config?: Record<string, any>
 }
 
 const nitroConfig: NitroConfig = {
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt'],
   css: ['@/assets/css/tailwind.css'],
   pinia: {
@@ -18,6 +24,12 @@ const nitroConfig: NitroConfig = {
       ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
     ],
   },
+  injectPosition: 'first',
+  viewer: true,
+  configPath: 'tailwind.config',
+  exposeConfig: false,
+  exposeLevel: 2,
+  config: {},
 }
 
 export default nitroConfig

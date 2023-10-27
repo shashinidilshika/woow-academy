@@ -9,8 +9,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {},
-      screens: {},
-      fontFamily: {},
+      screens: {
+        mobile: { max: '639px' },
+      },
+      fontFamily: {
+        body: ['Open Sans'],
+        sans: ['Open Sans'],
+      },
     },
   },
   plugins: [],
