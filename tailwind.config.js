@@ -3,9 +3,12 @@ module.exports = {
   purge: ['./pages/**/*.{vue,js,ts,jsx,tsx}', './src/components/**/*.{vue,js,ts,jsx,tsx}'],
   content: [
     './index.html',
-    './src/components/**/*/*.{vue,js,ts,jsx,tsx}',
+    './components/**/*/*.{vue,js,ts,jsx,tsx}',
     './pages/**/*/*.{vue,js,ts,jsx,tsx}',
-    './src/layouts/**/*/*.{vue,js,ts,jsx,tsx}',
+    './layouts/**/*/*.{vue,js,ts,jsx,tsx}',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
+    './error.vue',
   ],
   theme: {
     extend: {
