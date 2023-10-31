@@ -12,12 +12,23 @@ interface NitroConfig {
   exposeLevel?: number
   config?: Record<string, any>
   image?: { dir: string[]; screens: Record<string, number> }
+  tailwindcss?: { exposeConfig: boolean }
+  postcss?: { plugins: Record<string, any> }
 }
 
 const nitroConfig: NitroConfig = {
   devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', '@nuxt/image'],
+  tailwindcss: {
+    exposeConfig: true,
+  },
   css: ['@/assets/css/tailwind.css'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
   pinia: {
     autoImports: [
       // automatically imports `defineStore`
@@ -41,7 +52,7 @@ const nitroConfig: NitroConfig = {
   },
   injectPosition: 'first',
   viewer: true,
-  configPath: 'tailwind.config',
+  configPath: 'tailwind.config.js',
   exposeConfig: false,
   exposeLevel: 2,
   config: {},
