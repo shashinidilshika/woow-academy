@@ -24,6 +24,6 @@
 
 .header-up-dev {
   width: 100%;
-  background-color: #8dc9f6;
+  background-color: #707ef8;
 }
 </style>

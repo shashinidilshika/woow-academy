@@ -28,7 +28,7 @@
 .about-hero-section {
   width: 100%;
   height: 300px;
-  background-color: #8dc9f6;
+  background-color: #707ef8;
 }
 
 .about-hero-section-content {
