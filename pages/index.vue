@@ -8,7 +8,6 @@
           <div class="overlap">
             <img class="element" src="./../assets/images/profile-image.jpg" />
             <div class="rectangle-3"></div>
-            <img class="group" src="img/group-10.png" />
             <img class="img" src="~/assets/images/star.png" />
             <img class="group-2" src="~/assets/images/linkedin.png" />
             <img class="group-3" src="~/assets/images/github.png" />
@@ -34,7 +33,7 @@
             <img class="IMAGE-3" src="~/assets/images/cr-python.png" />
             <img class="group-7" src="~/assets/images/ply-btn.png" />
             <div class="div-wrapper">
-              <button class="text-wrapper-21" type="button">Browse Courses</button>
+              <NuxtLink to="/course" class="text-wrapper-21">Browse Courses</NuxtLink>
             </div>
             <div class="text-wrapper-22">Courses Progress</div>
             <div class="text-wrapper-23">Manage</div>
