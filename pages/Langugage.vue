@@ -5,20 +5,20 @@
     <div class="div">
       <div class="overlap-2">
         <div class="overlap-3">
-          <img class="fluent-emoji-high" src="img/fluent-emoji-high-contrast-writing-hand.svg" />
+          <img class="fluent-emoji-high" src="~/assets/images/fluent-emoji-high-contrast_writing-hand.png" />
           <div class="text-wrapper-11">Writing Proficiency</div>
         </div>
         <div class="overlap-4">
-          <img class="group-3" src="img/group-2.png" />
+          <img class="group-3" src="~/assets/images/oral-communication.png" />
           <div class="text-wrapper-11">Oral Communication</div>
         </div>
         <div class="overlap-5">
-          <img class="fluent-reading" src="img/fluent-mdl2-reading-mode-solid.svg" />
+          <img class="fluent-reading" src="~/assets/images/reading-comprehension.png" />
           <div class="rectangle-2"></div>
           <div class="text-wrapper-11">Reading Comprehension</div>
         </div>
         <div class="overlap-6">
-          <img class="cil-assistive" src="img/cil-assistive-listening-system.svg" />
+          <img class="cil-assistive" src="~/assets/images/cil_assistive-listening-system.png" />
           <div class="text-wrapper-12">Listening Comprehension</div>
         </div>
         <div class="text-wrapper-13">Covered Skills</div>
@@ -38,10 +38,10 @@
         English proficiency test <br />Pre-hire screening assessment to find the best candidates .
       </p>
       <div class="overlap-wrapper">
-        <div class="div-wrapper"><div class="text-wrapper-32">Practice Test</div></div>
+        <div class="div-wrapper"><button type="button" class="text-wrapper-32">Practice Test</button></div>
       </div>
       <div class="group-4">
-        <div class="div-wrapper"><div class="text-wrapper-33">Get Started</div></div>
+        <div class="div-wrapper"><button type="button" class="text-wrapper-33">Get Started</button></div>
       </div>
     </div>
   </div>
@@ -101,16 +101,6 @@
   height: 278px;
   top: 0;
   left: 0;
-}
-
-.language-page .overlap-group {
-  position: relative;
-  width: 1378px;
-  height: 85px;
-  top: 188px;
-  left: 14px;
-  background-image: url(./img/rectangle-113.svg);
-  background-size: 100% 100%;
 }
 
 .language-page .rectangle {
