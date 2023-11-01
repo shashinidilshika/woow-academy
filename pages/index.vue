@@ -10,9 +10,9 @@
             <div class="rectangle-3"></div>
             <img class="group" src="img/group-10.png" />
             <img class="img" src="~/assets/images/star.png" />
-            <img class="group-2" src="img/group-3.png" />
-            <img class="group-3" src="img/group-6.png" />
-            <img class="group-4" src="img/group-14.png" />
+            <img class="group-2" src="~/assets/images/linkedin.png" />
+            <img class="group-3" src="~/assets/images/github.png" />
+            <img class="group-4" src="~/assets/images/stackoverflow.png" />
             <div class="text-wrapper-10">Madhusha Prasad Silva</div>
             <div class="text-wrapper-11">20</div>
             <div class="text-wrapper-12">Following</div>
