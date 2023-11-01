@@ -1,12 +1,14 @@
-<script setup lang="ts"></script>
+<script lang="ts" setup></script>
 
 <template>
   <div class="learn-page">
     <div class="div">
-      <div class="overlap">
-        <img class="IMAGE" src="~/assets/images/html.png" />
-        <div class="text-wrapper">HTML</div>
-      </div>
+      <NuxtLink to="/courseDetails">
+        <div class="overlap">
+          <img class="IMAGE" src="~/assets/images/IMAGE.png" />
+          <div class="text-wrapper">JavaScript</div>
+        </div>
+      </NuxtLink>
       <div class="overlap-group">
         <img class="IMAGE" src="~/assets/images/cr-python.png" />
         <div class="text-wrapper-2">Python for Data Science</div>
@@ -935,7 +937,6 @@
   height: 85px;
   top: 188px;
   left: 14px;
-  //background-image: url(./img/rectangle-113.svg);
   background-size: 100% 100%;
 }
 
