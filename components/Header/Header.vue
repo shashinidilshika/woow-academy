@@ -11,7 +11,7 @@
     <div class="navigation-section">
       <ul>
         <li>Home</li>
-        <li><NuxtLink to="/langugage">Courses</NuxtLink></li>
+        <li><NuxtLink to="/course">Courses</NuxtLink></li>
         <li>Code Playground</li>
         <li><NuxtLink to="/leaderboard">Top Learners</NuxtLink></li>
         <li>Blog</li>

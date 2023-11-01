@@ -68,7 +68,9 @@
         <div class="rectangle-32"></div>
         <div class="rectangle-32"></div>
         <div class="group-18">
-          <div class="rectangle-33"></div>
+          <NuxtLink to="language">
+            <div class="rectangle-33"></div>
+          </NuxtLink>
           <div class="rectangle-34"></div>
           <div class="rectangle-35"></div>
           <div class="rectangle-36"></div>
