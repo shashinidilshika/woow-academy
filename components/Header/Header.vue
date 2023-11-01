@@ -11,9 +11,9 @@
     <div class="navigation-section">
       <ul>
         <li>Home</li>
-        <li>Courses</li>
+        <li><NuxtLink to="/langugage">Courses</NuxtLink></li>
         <li>Code Playground</li>
-        <li>Top Learners</li>
+        <li><NuxtLink to="/leaderboard">Top Learners</NuxtLink></li>
         <li>Blog</li>
         <li>FAQ</li>
         <li>Contact</li>
@@ -26,13 +26,15 @@
         <img alt="profile image" class="inline-block" src="~/assets/images/Group.jpg" />
         <p class="p-4 inline-block text-white text-center">46467</p>
       </div>
-      <div class="main-profile">
-        <img
-          alt="profile image"
-          class="profile-image"
-          src="https://avatars.githubusercontent.com/u/50085447?s=96&v=4"
-        />
-      </div>
+      <NuxtLink to="/">
+        <div class="main-profile">
+          <img
+            alt="profile image"
+            class="profile-image"
+            src="https://avatars.githubusercontent.com/u/50085447?s=96&v=4"
+          />
+        </div>
+      </NuxtLink>
     </div>
   </div>
 </template>
