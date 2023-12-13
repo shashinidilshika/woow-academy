@@ -1,34 +1,12 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-interface NitroConfig {
-  devtools?: { enabled: boolean }
-  modules?: string[]
-  css?: string[]
-  autoImports?: Array<string | [string, string]>
-  pinia?: boolean | { autoImports?: Array<string | [string, string]> }
-  injectPosition?: string
-  viewer?: boolean
-  configPath?: string
-  exposeConfig?: boolean
-  exposeLevel?: number
-  config?: Record<string, any>
-  image?: { dir: string[]; screens: Record<string, number> }
-}
-
-const nitroConfig: NitroConfig = {
-  devtools: { enabled: false },
+export default {
+  devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', '@nuxt/image'],
   css: ['@/assets/css/tailwind.css'],
   pinia: {
-    autoImports: [
-      // automatically imports `defineStore`
-      'defineStore', // import { defineStore } from 'pinia'
-      ['defineStore', 'definePiniaStore'], // import { defineStore as definePiniaStore } from 'pinia'
-    ],
+    autoImports: ['defineStore', ['defineStore', 'definePiniaStore']],
   },
   image: {
     dir: ['~/assets/images', '~/assets/icons', '~/assets/logos'],
-
-    // The screen sizes predefined by `@nuxt/image`:
     screens: {
       xs: 320,
       sm: 640,
@@ -39,12 +17,26 @@ const nitroConfig: NitroConfig = {
       '2xl': 1536,
     },
   },
-  injectPosition: 'first',
+  // Remove the unrecognized property
+  // injectPosition: 'first',
   viewer: true,
   configPath: 'tailwind.config',
   exposeConfig: false,
   exposeLevel: 2,
   config: {},
+  runtimeConfig: {
+    public: {
+      navLinks: [
+        'Home',
+        'Courses',
+        'Code Playground',
+        'Top Learners',
+        'Blog',
+        'FAQ',
+        'Contact',
+        'Terms of Use',
+        'Privacy Policy',
+      ],
+    },
+  },
 }
-
-export default nitroConfig

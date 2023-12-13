@@ -1,10 +1,14 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import { tailwindConfig } from '@storefront-ui/vue/tailwind-config'
+
+export default {
+  presets: [tailwindConfig],
   content: [
+    './**/*.vue',
     './index.html',
     './components/**/*/*.{vue,js,ts,jsx,tsx}',
     './pages/**/*/*.{vue,js,ts,jsx,tsx}',
     './layouts/**/*/*.{vue,js,ts,jsx,tsx}',
+    './node_modules/@storefront-ui/vue/**/*.{js,mjs}',
   ],
   theme: {
     extend: {

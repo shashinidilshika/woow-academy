@@ -4,7 +4,7 @@
   <div class="w-full h-auto">
     <!--Header section start-->
     <div class="header-section w-full h-20 fixed top-0 z-20">
-      <Header />
+      <!--      <Header />-->
     </div>
     <!--  Header section end-->
     <!--  main section start-->
