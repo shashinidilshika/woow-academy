@@ -12,7 +12,12 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        primary: 'rgb(var(--color-primary) / <alpha-value>)',
+        secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
+      },
       height: {
         '35vh': '35vh',
         '84vh-32': 'calc(84vh - 32px)',
