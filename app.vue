@@ -29,7 +29,7 @@ import Default from '~/layouts/default.vue'
 
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background-color: #8dc9f6;
+  background: linear-gradient(to left, #172554 -5.84%, #1e40af 106.73%);
 }
 
 * {

@@ -3,9 +3,9 @@
 <template>
   <div class="w-full h-screen">
     <div class="w-full h-full content-main-div">
-      <div class="profile-page bg-sky-600">
+      <div class="profile-page bg-gradient-to-r from-blue-800 to-blue-950">
         <div class="div">
-          <div class="overlap bg-sky-600">
+          <div class="overlap bg-gradient-to-r from-blue-800 to-blue-950">
             <img class="element" src="../../assets/images/profile-image.jpg" />
             <div class="rectangle-3"></div>
             <img class="img" src="../../assets/images/star.png" />
