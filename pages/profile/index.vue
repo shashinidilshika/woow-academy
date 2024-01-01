@@ -1,5 +1,4 @@
-<script lang="ts" setup>
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <div class="w-full h-screen">
@@ -38,18 +37,39 @@
     </div>
     <!--    profile page header end-->
     <!--    profile page course content start-->
-    <div class="flex-wrap lg:flex-row md:flex-col:flex-col w-full h-full px-10 lg:px-28 md:px-16 sm:px-16 py-16 justify-center items-start">
-     <div class="w-full flex flex-col lg:flex-row md:flex-col sm:flex-col justify-center items-center bg-black text-white rounded-xl">
-       <div class="lg:absolute lg:left-40 font-normal text-2xl">
-         Woow <br />
-         Space
-       </div>
-       <img class="vector" src="../../assets/images/profilebg-img.png" />
-       <div class="lg:absolute lg:right-40">
-         <button type="button">Start Today</button>
-         <button type="button">Generate CV</button>
-       </div>
-     </div>
+    <div
+      class="flex-wrap lg:flex-row md:flex-col:flex-col w-full h-full px-10 lg:px-28 md:px-16 sm:px-16 py-16 justify-center items-start"
+    >
+      <!--      content header start -->
+      <div
+        class="w-full flex flex-col lg:flex-row md:flex-col sm:flex-col justify-center items-center bg-black text-white rounded-xl"
+      >
+        <div class="lg:absolute lg:left-40 font-normal text-2xl pt-3 lg:pt-0">
+          Woow <br />
+          Space
+        </div>
+        <img class="vector" src="../../assets/images/profilebg-img.png" />
+        <div class="lg:absolute lg:right-40 flex flex-row justify-between pb-3 lg:pb-0">
+          <button class="px-4 py-4 rounded-[10px] bg-gradient-to-r from-blue-800 to-blue-950 mr-2" type="button">
+            Start Today
+          </button>
+          <button class="px-4 py-4 rounded-[10px] bg-gradient-to-r from-blue-800 to-blue-950 ml-2" type="button">
+            Generate CV
+          </button>
+        </div>
+      </div>
+      <!--      content header end-->
+      <!--      content start -->
+      <div class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 justify-center items-center">
+        <div>hello</div>
+        <div>hello</div>
+        <div>hello</div>
+        <div>hello</div>
+        <div>hello</div>
+        <div>hello</div>
+        <div>hello</div>
+      </div>
+      <!--      content end-->
     </div>
     <!--    profile page course content end-->
   </div>
