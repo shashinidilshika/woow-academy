@@ -41,5 +41,8 @@ import Default from '~/layouts/default.vue'
 body {
   width: 100%;
   height: 100%;
+  font-family: Fira Sans;
+  font-style: normal;
+  line-height: normal;
 }
 </style>
