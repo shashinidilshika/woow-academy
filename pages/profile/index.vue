@@ -13,7 +13,6 @@
         />
       </div>
       <!--      image section end-->
-
       <!--      profile details section start-->
       <div
         class="flex flex-col w-full lg:w-1/2 md:w-full sm:w-full h-full p-5 justify-center items-start lg:pl-10 md:p-5 sm:p-5 text-white font-normal"
