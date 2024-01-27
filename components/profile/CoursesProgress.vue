@@ -5,7 +5,7 @@
     <!--    card title section-->
     <div class="grid grid-cols-2 justify-between items-center pb-3">
       <div>
-        <h3 class="text-2xl font-bold">Courses Progress</h3>
+        <h3 class="text-2xl">Courses Progress</h3>
       </div>
       <div class="text-right">
         <h6 class="text-lg text-textLink cursor-pointer">Manage</h6>

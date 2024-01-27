@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import CoursesProgress from '~/components/profile/CoursesProgress.vue'
+import RecentAchievements from '~/components/profile/RecentAchievements.vue'
 </script>
 
 <template>
@@ -61,9 +62,9 @@ import CoursesProgress from '~/components/profile/CoursesProgress.vue'
       </div>
       <!--      content header end-->
       <!--      content start -->
-      <div class="flex justify-around items-center mt-12">
+      <div class="flex justify-around items-start mt-12">
         <CoursesProgress />
-        <CoursesProgress />
+        <RecentAchievements />
       </div>
       <!--      content end-->
     </div>
