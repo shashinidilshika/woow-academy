@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import Header from '~/components/common/Header/Header.vue'
+import Footer from '~/components/common/Footer/Footer.vue'
 </script>
 
 <template>
@@ -11,12 +12,17 @@ import Header from '~/components/common/Header/Header.vue'
       <!--      <div class="w-full h-full px-28 py-16">-->
       <div>
         <slot />
-      </div>
-      <div>
-        <!--        <Footer/>-->
+        <div class="footer-layout-div">
+          <Footer />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.footer-layout-div {
+  position: relative;
+  top: calc(100vh - -80px);
+}
+</style>
