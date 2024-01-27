@@ -1,8 +1,7 @@
-<script lang="ts" setup>
-</script>
+<script lang="ts" setup></script>
 
 <template>
-  <div class="shadow-sm rounded p-3 courses-progress-div">
+  <div class="shadow-sm rounded pt-10 pb-10 pl-10 pr-10 courses-progress-div">
     <!--    card title section-->
     <div class="grid grid-cols-2 justify-between items-center pb-3">
       <div>

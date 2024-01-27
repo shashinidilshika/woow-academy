@@ -1,8 +1,6 @@
 <template>
   <header>
-    <nav
-      class="border-gray-200 px-4 lg:px-6 py-2.5 z-10"
-    >
+    <nav class="border-gray-200 px-4 lg:px-6 py-2.5 z-10">
       <div class="flex flex-wrap justify-between items-center mx-auto">
         <a href="https://flowbite.com" class="flex items-center">
           <span class="self-center pb-5 text-xl font-semibold whitespace-nowrap dark:text-white"
