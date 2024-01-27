@@ -2,7 +2,6 @@
 import CoursesProgress from '~/components/profile/CoursesProgress.vue'
 import RecentAchievements from '~/components/profile/RecentAchievements.vue'
 import Certificates from '~/components/profile/Certificates.vue'
-import Footer from '~/components/common/Footer/Footer.vue'
 </script>
 
 <template>
