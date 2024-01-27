@@ -6,7 +6,7 @@
       <Header />
     </div>
     <div class="relative top-[74px] w-full h-screen">
-<!--      <div class="w-full h-full px-28 py-16">-->
+      <!--      <div class="w-full h-full px-28 py-16">-->
       <div>
         <slot />
       </div>
