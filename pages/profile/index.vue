@@ -61,7 +61,7 @@ import CoursesProgress from "~/components/profile/CoursesProgress.vue";
       </div>
       <!--      content header end-->
       <!--      content start -->
-      <div class="flex justify-around items-center mt-5">
+      <div class="flex justify-around items-center mt-12">
         <CoursesProgress />
         <CoursesProgress />
       </div>
