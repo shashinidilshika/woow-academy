@@ -12,7 +12,7 @@
         </a>
         <div class="flex items-center justify-between lg:order-2 pb-5">
           <div class="flex justify-center items-center w-fit pl-8 pr-8">
-            <img src="../../assets/images/points-icon.png" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
+            <img src="../../../assets/images/points-icon.png" class="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
             <h5 class="text-white">56473</h5>
           </div>
           <NuxtLink to="/profile">
@@ -123,7 +123,7 @@
 
 <style scoped>
 header {
-  background-image: url(../../assets/images/HeaderBackgroung.svg);
+  background-image: url(../../../assets/images/HeaderBackgroung.svg);
   background-repeat: no-repeat;
   background-position: 80% 90%;
   background-size: cover;
