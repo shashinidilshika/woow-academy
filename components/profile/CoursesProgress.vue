@@ -1,5 +1,4 @@
-<script lang="ts" setup>
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <div class="shadow-sm rounded pt-10 pb-10 pl-10 pr-10 courses-progress-div">

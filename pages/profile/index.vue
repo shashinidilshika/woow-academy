@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import CoursesProgress from "~/components/profile/CoursesProgress.vue";
+import CoursesProgress from '~/components/profile/CoursesProgress.vue'
 </script>
 
 <template>
