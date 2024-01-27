@@ -1,4 +1,6 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import CoursesProgress from "~/components/profile/CoursesProgress.vue";
+</script>
 
 <template>
   <div class="w-full h-screen">
@@ -59,14 +61,9 @@
       </div>
       <!--      content header end-->
       <!--      content start -->
-      <div class="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 justify-center items-center">
-        <div>hello</div>
-        <div>hello</div>
-        <div>hello</div>
-        <div>hello</div>
-        <div>hello</div>
-        <div>hello</div>
-        <div>hello</div>
+      <div class="flex justify-around items-center mt-5">
+        <CoursesProgress />
+        <CoursesProgress />
       </div>
       <!--      content end-->
     </div>
