@@ -1,11 +1,9 @@
 <template>
-  <!--  <Default>-->
-  <NuxtPage />
-  <!--  </Default>-->
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
-<script lang="ts" setup>
-import Default from '~/layouts/default.vue'
-</script>
+<script lang="ts" setup></script>
 <style>
 :root {
   --darkgreen: rgba(24, 96, 73, 1);
