@@ -51,10 +51,10 @@ definePageMeta({
         </div>
       </div>
       <div class="social-login-group">
-        <button class="group-button">
+        <NuxtLink to="/profile" class="group-button">
           <div class="frame-child2" />
           <b class="login-now">Login Now</b>
-        </button>
+        </NuxtLink>
       </div>
       <div class="other-login-options">
         <div class="login-with-others-container">
@@ -82,7 +82,7 @@ definePageMeta({
       </div>
       <div class="new-to-woow-container">
         <span class="new-to-woow">new to WooW Space? </span>
-        <a class="create-an-account" href="#">Create an account</a>
+        <NuxtLink to="/signup" class="create-an-account">Create an account</NuxtLink>
       </div>
     </form>
     <h1 class="woow-space">
@@ -229,7 +229,7 @@ definePageMeta({
   margin: 0 !important;
   position: absolute;
   bottom: 13.75rem;
-  left: 6.56rem;
+  left: 7.56rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -505,6 +505,7 @@ definePageMeta({
 }
 
 .rectangle-parent1 {
+  width: 362px;
   cursor: pointer;
   border: 1px solid var(--color-lavender-100);
   padding: var(--padding-2xs) 6.88rem var(--padding-2xs) 6.31rem;
@@ -516,7 +517,7 @@ definePageMeta({
   align-items: center;
   justify-content: flex-start;
   gap: var(--gap-mid);
-  max-width: 100%;
+  /* max-width: 100%; */
   white-space: nowrap;
 }
 
@@ -562,6 +563,7 @@ definePageMeta({
 }
 
 .rectangle-parent2 {
+  width: 362px;
   cursor: pointer;
   border: 1px solid var(--color-lavender-100);
   padding: var(--padding-2xs) var(--padding-xl) var(--padding-2xs) 1.81rem;
@@ -574,7 +576,7 @@ definePageMeta({
   align-items: center;
   justify-content: center;
   gap: var(--gap-mid);
-  max-width: 100%;
+  /* max-width: 100%; */
   white-space: nowrap;
 }
 
