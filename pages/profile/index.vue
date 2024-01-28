@@ -2,6 +2,10 @@
 import CoursesProgress from '~/components/profile/CoursesProgress.vue'
 import RecentAchievements from '~/components/profile/RecentAchievements.vue'
 import Certificates from '~/components/profile/Certificates.vue'
+
+definePageMeta({
+  layout: 'user',
+})
 </script>
 
 <template>
