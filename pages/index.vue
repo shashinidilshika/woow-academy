@@ -1,4 +1,8 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+definePageMeta({
+  layout: 'default',
+})
+</script>
 
 <template>
   <div class="login">
@@ -78,7 +82,7 @@
       </div>
       <div class="new-to-woow-container">
         <span class="new-to-woow">new to WooW Space? </span>
-        <a href="#" class="create-an-account">Create an account</a>
+        <a class="create-an-account" href="#">Create an account</a>
       </div>
     </form>
     <h1 class="woow-space">
