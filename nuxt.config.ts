@@ -23,6 +23,10 @@ export default {
         wght: '200..900',
         ital: '200..700',
       },
+      Poppins: {
+        wght: '200..900',
+        ital: '200..700',
+      },
     },
   },
   alias: {

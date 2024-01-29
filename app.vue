@@ -74,7 +74,7 @@
 body {
   width: 100%;
   height: 100%;
-  font-family: Fira Sans;
+  font-family: var(--font-poppins) !important;
   font-style: normal;
   line-height: normal;
 }
