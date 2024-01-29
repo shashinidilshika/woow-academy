@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+import eye from '../assets/icons/eye.png'
+import eyeSlash from '../assets/icons/eye-slash.png'
+const showPassword = ref(false)
+const showConfirmPassword = ref(false)
 definePageMeta({
   layout: 'default',
 })
@@ -83,13 +87,35 @@ const onSubmit = () => {
           </div>
           <div class="password">
             <div class="confirm-password-child" />
-            <input type="password" class="username" v-model="signupForm.password" placeholder="Password" required />
+            <input
+              :type="showPassword ? 'text' : 'password'"
+              class="password-field"
+              v-model="signupForm.password"
+              placeholder="Password"
+              required
+            />
             <img class="frame-icon" alt="" src="~/assets/images/frame-1.svg" />
+            <img
+              class="frame-icon-eye cursor-pointer"
+              alt=""
+              :src="showPassword ? eye : eyeSlash"
+              @click="showPassword = !showPassword"
+            />
           </div>
           <div class="confirm-password">
             <div class="confirm-password-child" />
-            <input type="password" class="username" placeholder="Confirm Password" />
+            <input
+              :type="showConfirmPassword ? 'text' : 'password'"
+              class="password-field"
+              placeholder="Confirm Password"
+            />
             <img class="frame-icon" alt="" src="~/assets/images/frame-1.svg" />
+            <img
+              class="frame-icon-eye cursor-pointer"
+              alt=""
+              :src="showConfirmPassword ? eye : eyeSlash"
+              @click="showConfirmPassword = !showConfirmPassword"
+            />
           </div>
           <button class="btn-signup">Signup</button>
         </form>
@@ -388,6 +414,14 @@ const onSubmit = () => {
   height: 24px;
   overflow: hidden;
 }
+.frame-icon-eye {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
 .confirm-password {
   position: absolute;
   top: 676px;
@@ -424,13 +458,27 @@ const onSubmit = () => {
   font-family: var(--font-poppins);
   font-size: var(--font-size-xs);
   background-color: transparent;
-  height: 1.13rem;
-  position: relative;
   color: var(--color-gray-100);
   text-align: left;
   display: inline-block;
   z-index: 1;
   width: 308px;
+  height: 52px;
+}
+
+.password-field {
+  position: absolute;
+  left: 48px;
+  border: none;
+  outline: none;
+  font-family: var(--font-poppins);
+  font-size: var(--font-size-xs);
+  background-color: transparent;
+  color: var(--color-gray-100);
+  text-align: left;
+  display: inline-block;
+  z-index: 1;
+  width: 265px;
   height: 52px;
 }
 .user-name {
