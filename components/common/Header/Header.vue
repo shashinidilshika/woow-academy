@@ -2,7 +2,7 @@
   <header>
     <nav class="border-gray-200 px-4 lg:px-6 py-2.5 z-10">
       <div class="flex flex-wrap justify-between items-center mx-auto">
-        <a class="flex items-center" href="https://flowbite.com">
+        <a class="flex items-center" href="/">
           <span class="self-center pb-5 text-xl font-semibold whitespace-nowrap dark:text-white"
             >Woow <br />
             Space</span

@@ -2,6 +2,20 @@
 definePageMeta({
   layout: 'default',
 })
+
+const signupForm = reactive({
+  firstName: '',
+  lastName: '',
+  userName: '',
+  email: '',
+  phoneNumber: '',
+  password: '',
+})
+
+const onSubmit = () => {
+  console.log(signupForm)
+}
+
 </script>
 <template>
   <div class="sign-up">
@@ -42,42 +56,44 @@ definePageMeta({
             </span>
           </button>
         </div>
-        <button class="btn-signup">Signup</button>
-        <div class="confirm-password">
-          <div class="confirm-password-child" />
-          <input class="username" placeholder="Confirm Password" />
-          <img class="frame-icon" alt="" src="~/assets/images/frame-1.svg" />
-        </div>
-        <div class="password">
-          <div class="confirm-password-child" />
-          <input class="username" placeholder="Password" />
-          <img class="frame-icon" alt="" src="~/assets/images/frame-1.svg" />
-        </div>
-        <div class="phone-number">
-          <div class="confirm-password-child" />
-          <input class="username" placeholder="Phone number" />
-          <img class="frame-icon" alt="" src="~/assets/images/frame-4.svg" />
-        </div>
-        <div class="email">
-          <div class="confirm-password-child" />
-          <input class="username" placeholder="Email" />
-          <img class="frame-icon" alt="" src="~/assets/images/frame-3.svg" />
-        </div>
-        <div class="user-name">
-          <div class="confirm-password-child" />
-          <input class="username" placeholder="Username" />
-          <img class="frame-icon" alt="" src="~/assets/images/frame.svg" />
-        </div>
-        <div class="last-name">
-          <div class="confirm-password-child" />
-          <input class="username" placeholder="Last Name" />
-          <img class="frame-icon" alt="" src="~/assets/images/frame.svg" />
-        </div>
-        <div class="first-name">
-          <div class="confirm-password-child" />
-          <input class="username" placeholder="First Name" />
-          <img class="frame-icon" alt="" src="~/assets/images/frame.svg" />
-        </div>
+        <form @submit.prevent="onSubmit">
+          <div class="first-name">
+            <div class="confirm-password-child" />
+            <input type="text" class="username" v-model="signupForm.firstName" placeholder="First Name" required />
+            <img class="frame-icon" alt="" src="~/assets/images/frame.svg" />
+          </div>
+          <div class="last-name">
+            <div class="confirm-password-child" />
+            <input type="text" class="username" v-model="signupForm.lastName" placeholder="Last Name" required />
+            <img class="frame-icon" alt="" src="~/assets/images/frame.svg" />
+          </div>
+          <div class="user-name">
+            <div class="confirm-password-child" />
+            <input type="text" class="username" v-model="signupForm.userName" placeholder="Username" required />
+            <img class="frame-icon" alt="" src="~/assets/images/frame.svg" />
+          </div>
+          <div class="email">
+            <div class="confirm-password-child" />
+            <input type="email" class="username" v-model="signupForm.email" placeholder="Email" required />
+            <img class="frame-icon" alt="" src="~/assets/images/frame-3.svg" />
+          </div>
+          <div class="phone-number">
+            <div class="confirm-password-child" />
+            <input type="text" class="username" v-model="signupForm.phoneNumber" placeholder="Phone number" required />
+            <img class="frame-icon" alt="" src="~/assets/images/frame-4.svg" />
+          </div>
+          <div class="password">
+            <div class="confirm-password-child" />
+            <input type="password" class="username" v-model="signupForm.password" placeholder="Password" required />
+            <img class="frame-icon" alt="" src="~/assets/images/frame-1.svg" />
+          </div>
+          <div class="confirm-password">
+            <div class="confirm-password-child" />
+            <input type="password" class="username" placeholder="Confirm Password" />
+            <img class="frame-icon" alt="" src="~/assets/images/frame-1.svg" />
+          </div>
+          <button class="btn-signup">Signup</button>
+        </form>
         <div class="create-account-prompt">
           <h1 class="signup-text-1">SignUp</h1>
           <p class="how-to-i">How to i get started lorem ipsum dolor at?</p>
@@ -328,7 +344,7 @@ definePageMeta({
 .rectangle-group:hover {
   background-color: var(--color-lavender-300);
   border: 1px solid var(--color-lavender-200);
-  box-sizing: border;
+  box-sizing: border-box;
   border-radius: 16px;
 }
 .google-signup {
