@@ -1,7 +1,27 @@
 <script lang="ts" setup>
+import { useRouter } from 'vue-router'
+import eye from '../assets/icons/eye.png'
+import eyeSlash from '../assets/icons/eye-slash.png'
+const router = useRouter()
+const showPassword = ref(false)
+
 definePageMeta({
   layout: 'default',
 })
+
+const userLoginForm = reactive({
+  email: '',
+  password: '',
+})
+const onSubmitLogin = () => {
+  if (userLoginForm.email || userLoginForm.password) {
+    console.log(userLoginForm)
+    router.push('/profile')
+  } else {
+    console.log(userLoginForm)
+    alert('Please input your user credentials')
+  }
+}
 </script>
 
 <template>
@@ -33,7 +53,7 @@ definePageMeta({
       </button>
     </div>
     <img alt="" class="subtract-icon" loading="eager" src="~/assets/images/subtract.svg" />
-    <form class="google-frame">
+    <form class="google-frame" @submit.prevent="onSubmitLogin" novalidate>
       <div class="create-account-prompt">
         <h1 class="login1">Login</h1>
         <div class="how-to-i">How to i get started lorem ipsum dolor at?</div>
@@ -42,19 +62,31 @@ definePageMeta({
         <div class="rectangle-container">
           <div class="rectangle-div" />
           <img alt="" class="google-login-icon" src="~/assets/images/google-login.svg" />
-          <input class="username" placeholder="Username" type="text" />
+          <input class="username" placeholder="email" type="email" required v-model="userLoginForm.email" />
         </div>
         <div class="group-div">
           <div class="frame-child1" />
           <img alt="" class="frame-content-icon" src="~/assets/images/frame-1.svg" />
-          <input class="password" placeholder="Password" type="text" />
+          <input
+            class="password"
+            placeholder="Password"
+            :type="showPassword ? 'text' : 'password'"
+            required
+            v-model="userLoginForm.password"
+          />
+          <img
+            alt="passwordView"
+            class="frame-content-icon cursor-pointer"
+            :src="showPassword ? eye : eyeSlash"
+            @click="showPassword = !showPassword"
+          />
         </div>
       </div>
       <div class="social-login-group">
-        <NuxtLink to="/profile" class="group-button">
-          <div class="frame-child2" />
+        <button class="group-button">
+          <span class="frame-child2" />
           <b class="login-now">Login Now</b>
-        </NuxtLink>
+        </button>
       </div>
       <div class="other-login-options">
         <div class="login-with-others-container">

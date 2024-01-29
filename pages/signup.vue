@@ -15,7 +15,6 @@ const signupForm = reactive({
 const onSubmit = () => {
   console.log(signupForm)
 }
-
 </script>
 <template>
   <div class="sign-up">
