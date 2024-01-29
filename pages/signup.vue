@@ -1,7 +1,24 @@
 <script lang="ts" setup>
+import eye from '../assets/icons/eye.png'
+import eyeSlash from '../assets/icons/eye-slash.png'
+const showPassword = ref(false)
+const showConfirmPassword = ref(false)
 definePageMeta({
   layout: 'default',
 })
+
+const signupForm = reactive({
+  firstName: '',
+  lastName: '',
+  userName: '',
+  email: '',
+  phoneNumber: '',
+  password: '',
+})
+
+const onSubmit = () => {
+  console.log(signupForm)
+}
 </script>
 <template>
   <div class="sign-up">
@@ -42,42 +59,66 @@ definePageMeta({
             </span>
           </button>
         </div>
-        <button class="btn-signup">Signup</button>
-        <div class="confirm-password">
-          <div class="confirm-password-child" />
-          <input class="username" placeholder="Confirm Password" />
-          <img class="frame-icon" alt="" src="~/assets/images/frame-1.svg" />
-        </div>
-        <div class="password">
-          <div class="confirm-password-child" />
-          <input class="username" placeholder="Password" />
-          <img class="frame-icon" alt="" src="~/assets/images/frame-1.svg" />
-        </div>
-        <div class="phone-number">
-          <div class="confirm-password-child" />
-          <input class="username" placeholder="Phone number" />
-          <img class="frame-icon" alt="" src="~/assets/images/frame-4.svg" />
-        </div>
-        <div class="email">
-          <div class="confirm-password-child" />
-          <input class="username" placeholder="Email" />
-          <img class="frame-icon" alt="" src="~/assets/images/frame-3.svg" />
-        </div>
-        <div class="user-name">
-          <div class="confirm-password-child" />
-          <input class="username" placeholder="Username" />
-          <img class="frame-icon" alt="" src="~/assets/images/frame.svg" />
-        </div>
-        <div class="last-name">
-          <div class="confirm-password-child" />
-          <input class="username" placeholder="Last Name" />
-          <img class="frame-icon" alt="" src="~/assets/images/frame.svg" />
-        </div>
-        <div class="first-name">
-          <div class="confirm-password-child" />
-          <input class="username" placeholder="First Name" />
-          <img class="frame-icon" alt="" src="~/assets/images/frame.svg" />
-        </div>
+        <form @submit.prevent="onSubmit">
+          <div class="first-name">
+            <div class="confirm-password-child" />
+            <input type="text" class="username" v-model="signupForm.firstName" placeholder="First Name" required />
+            <img class="frame-icon" alt="" src="~/assets/images/frame.svg" />
+          </div>
+          <div class="last-name">
+            <div class="confirm-password-child" />
+            <input type="text" class="username" v-model="signupForm.lastName" placeholder="Last Name" required />
+            <img class="frame-icon" alt="" src="~/assets/images/frame.svg" />
+          </div>
+          <div class="user-name">
+            <div class="confirm-password-child" />
+            <input type="text" class="username" v-model="signupForm.userName" placeholder="Username" required />
+            <img class="frame-icon" alt="" src="~/assets/images/frame.svg" />
+          </div>
+          <div class="email">
+            <div class="confirm-password-child" />
+            <input type="email" class="username" v-model="signupForm.email" placeholder="Email" required />
+            <img class="frame-icon" alt="" src="~/assets/images/frame-3.svg" />
+          </div>
+          <div class="phone-number">
+            <div class="confirm-password-child" />
+            <input type="text" class="username" v-model="signupForm.phoneNumber" placeholder="Phone number" required />
+            <img class="frame-icon" alt="" src="~/assets/images/frame-4.svg" />
+          </div>
+          <div class="password">
+            <div class="confirm-password-child" />
+            <input
+              :type="showPassword ? 'text' : 'password'"
+              class="password-field"
+              v-model="signupForm.password"
+              placeholder="Password"
+              required
+            />
+            <img class="frame-icon" alt="" src="~/assets/images/frame-1.svg" />
+            <img
+              class="frame-icon-eye cursor-pointer"
+              alt=""
+              :src="showPassword ? eye : eyeSlash"
+              @click="showPassword = !showPassword"
+            />
+          </div>
+          <div class="confirm-password">
+            <div class="confirm-password-child" />
+            <input
+              :type="showConfirmPassword ? 'text' : 'password'"
+              class="password-field"
+              placeholder="Confirm Password"
+            />
+            <img class="frame-icon" alt="" src="~/assets/images/frame-1.svg" />
+            <img
+              class="frame-icon-eye cursor-pointer"
+              alt=""
+              :src="showConfirmPassword ? eye : eyeSlash"
+              @click="showConfirmPassword = !showConfirmPassword"
+            />
+          </div>
+          <button class="btn-signup">Signup</button>
+        </form>
         <div class="create-account-prompt">
           <h1 class="signup-text-1">SignUp</h1>
           <p class="how-to-i">How to i get started lorem ipsum dolor at?</p>
@@ -328,7 +369,7 @@ definePageMeta({
 .rectangle-group:hover {
   background-color: var(--color-lavender-300);
   border: 1px solid var(--color-lavender-200);
-  box-sizing: border;
+  box-sizing: border-box;
   border-radius: 16px;
 }
 .google-signup {
@@ -373,6 +414,14 @@ definePageMeta({
   height: 24px;
   overflow: hidden;
 }
+.frame-icon-eye {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
 .confirm-password {
   position: absolute;
   top: 676px;
@@ -409,13 +458,27 @@ definePageMeta({
   font-family: var(--font-poppins);
   font-size: var(--font-size-xs);
   background-color: transparent;
-  height: 1.13rem;
-  position: relative;
   color: var(--color-gray-100);
   text-align: left;
   display: inline-block;
   z-index: 1;
   width: 308px;
+  height: 52px;
+}
+
+.password-field {
+  position: absolute;
+  left: 48px;
+  border: none;
+  outline: none;
+  font-family: var(--font-poppins);
+  font-size: var(--font-size-xs);
+  background-color: transparent;
+  color: var(--color-gray-100);
+  text-align: left;
+  display: inline-block;
+  z-index: 1;
+  width: 265px;
   height: 52px;
 }
 .user-name {
